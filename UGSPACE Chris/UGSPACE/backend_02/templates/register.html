@@ -1,0 +1,117 @@
+{%extends './partials/base.html'%}
+{%block title%}
+        Home
+{%endblock%}
+
+{%block content%}
+
+<style>
+    
+.main{
+  background: url(http://127.0.0.1:8000/media/WallpaperDog-20496599.jpg)
+}
+
+
+
+justify-content: center;
+align-items: center;
+font-family: 'Work Sans', sans-serif;
+
+}
+.container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    text-size-adjust: auto;
+    
+  }
+    .image {
+    flex-basis: 8%;
+    position:relative;left:-2px;top:-10px;
+    max-width: 70px;
+  }
+  .text {
+    font-size: 15pt;
+    padding-left: 4px;
+	padding: 10px;
+    position:relative;left:-2px;top:-24px;
+  }
+
+.wrapper{
+	min-height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    font-size: large;
+	padding-top: 5%;
+}
+
+.registration_form{
+	background: url(http://127.0.0.1:8000/media/WallpaperDog-20496599.jpg)
+	padding: 25px;
+	border-radius: 5px;
+	width: 400px;
+}
+
+.registration_form .title{
+	text-align: center;
+	font-size: 30px;
+	text-transform: uppercase;
+	color:#ffc107;
+	letter-spacing: 5px;
+	font-weight: 500;
+}
+
+form
+{
+    color: #ffc107;
+}
+
+
+
+.log_in a:link, .log_in a:visited {
+    background-color: green;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .log_in a:hover,.log_in a:active {
+    background-color: solid green;
+border-radius: 6px;
+  }
+
+  .log_in{
+      color: burlywood;
+display: block;
+margin: 5px auto;
+width: 20%;
+}
+  a{
+	border-radius: 6px;
+
+  }
+</style>
+
+<body class="main">
+    <div class="wrapper">
+        <div class="registration_form">
+            <div class="title">
+                REGISTER
+            </div>
+    
+            <form method="POST">
+                {% csrf_token %}
+    
+                {{form.as_p}}
+                <button class="btn btn-success" type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <div class="log_in">
+        Already have account? <a class="bg-primary text-white" href="{% url 'login' %}">Log In</a>
+    </div>
+</body>
+{%endblock%}

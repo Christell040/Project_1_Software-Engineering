@@ -1,0 +1,128 @@
+
+
+
+body{
+    height: 100vh;
+     background: linear-gradient(
+        
+     white 0%,
+        white 15%,
+        #28477d 15%,
+        #28477d 100%
+    );
+font-family: Arial, sans-serif;
+justify-content: center;
+align-items: center;
+
+}
+
+h1{
+text-align: center;
+font-size: 50px;
+color: burlywood;
+}
+
+form{
+margin: 20px auto;
+width: 40%;
+color: burlywood;
+}
+
+input{
+padding: 10px;
+font-size: inherit;
+}
+
+input[type="text"]{
+display: block;
+margin-bottom: 25px;
+
+width: 100%;
+border:2px solid burlywood;
+
+
+}
+input[type="password"]{
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+    border:2px solid burlywood;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+  }
+  input[type=password]:focus {
+    background-color: lightblue;
+  }
+
+input[type=submit]{
+width: 40%;
+border: none;
+background : rgb(51, 127, 174);
+color: white;
+margin-bottom: 25px;
+
+  }
+  input[type=submit]:focus{
+    width: 40%;
+    border: solid #337fae;
+    background: white;
+    color: #337fae;
+  }
+
+    button{
+        width: 40%;
+        border: solid #337fae;
+        background: white;
+        color: #337fae;
+}
+
+button{
+    width: 40%;
+    border: none;
+    background : rgb(51, 127, 174);
+    color: white;
+    align-content: center;
+}
+    
+.container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    
+  }
+  img {
+    max-width: 100%
+  }
+  .image {
+    flex-basis: 8%
+  }
+  .text {
+    font-size: 30px;
+    padding-left: 2px;
+  }
+
+/* REGISTER BUTTON */
+  a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: red;
+
+  }
+
+  .register{
+      color: white;
+display: block;
+margin: 20px auto;
+width: 20%;
+
+
+  }

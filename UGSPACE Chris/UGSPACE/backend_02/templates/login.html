@@ -1,0 +1,83 @@
+{%extends './partials/base.html'%}
+{%block title%}
+        Home
+{%endblock%}
+
+{%block content%}
+
+
+<style>
+  .main{
+    background: url(http://127.0.0.1:8000/media/WallpaperDog-20496599.jpg)
+}
+.land{
+    background: url(./pexels-jana-kukebal-6496462.jpg)
+}
+
+</style>
+
+<body class="main">
+
+<h1 class="text-warning text-center py-5">Welcome </h1>
+    
+
+
+<section class="">
+        <div class="container ">
+            <div class="row text-center ">
+                <div class="col-md-4">
+                   
+                </div>
+                <div class="col-md-4">
+                    
+                       
+<div>
+        <form method = "POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <div class="mb-3">
+            <h4 class="form-label text-light">Username</h4>
+            
+            
+            <input type="text" name="username" />
+            <br/>
+            <br/>
+            <h4 class="form-label text-light">Password</h4>
+
+            <input type="password" name="password" />
+            <br/>
+            <br/>
+            <input class ="btn btn-primary" type="submit" value= "Login" />
+            <br/>
+            <br/>
+        </form>
+      </div>
+</div>
+
+
+</form>
+<div class="register">
+    <p class="text-light">Not a member? <a  class="btn btn-success" href="{% url 'register' %}">Register</a></p>
+</div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+                   
+                </div>       
+
+
+               
+
+
+
+            </div>
+
+        </div>
+</section>
+
+
+
+</body>
+
+{%endblock%}

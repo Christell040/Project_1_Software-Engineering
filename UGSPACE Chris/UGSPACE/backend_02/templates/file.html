@@ -1,0 +1,31 @@
+{%extends './partials/base.html'%}
+{%block title%}
+    Home
+{%endblock%}
+
+{%block content%}
+<style>
+    .main{
+      background: url(http://127.0.0.1:8000/media/WallpaperDog-20496599.jpg)
+  }
+  .land{
+      background: url(./pexels-jana-kukebal-6496462.jpg)
+  }
+  
+</style>
+
+<body class="main">
+
+    <div class="container-fluid border-2">
+        <div class="row">
+            {%for project in file %}
+            <div class="col-6">
+                <p><h5><img class="" src="http://127.0.0.1:8000/media/icons8-pdf-48.png" alt=""> <p class="text-light">{{project.projectname}}</p></p></h5></p>
+                <a href="{{project.projectfile.url}}" class="btn btn-primary">View</a>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</body>
+{%endblock%}
+
